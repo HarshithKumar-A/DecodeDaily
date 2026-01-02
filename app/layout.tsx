@@ -12,13 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import { SITE_URL } from '@/lib/constants';
+
 export const metadata: Metadata = {
   title: {
     template: '%s | DecodeDaily',
     default: 'DecodeDaily - Tech & Insights',
   },
   description: "Your daily dose of tech insights and answers.",
-  metadataBase: new URL('https://decodedaily.vercel.app'),
+  metadataBase: new URL(SITE_URL),
 };
 
 export default function RootLayout({

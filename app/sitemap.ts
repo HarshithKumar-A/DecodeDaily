@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/getPosts';
 
+import { SITE_URL } from '@/lib/constants';
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const posts = getAllPosts();
-    const baseUrl = 'https://decodedaily.vercel.app';
+    const baseUrl = SITE_URL;
 
     const blogPosts = posts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,
